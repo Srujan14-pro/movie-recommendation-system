@@ -34,8 +34,8 @@ def read_root():
 # Favicon route to avoid 404 on /favicon.ico
 @app.get("/favicon.ico")
 def favicon():
-    # If you have a favicon.ico file, provide its path below. Otherwise, return a blank response.
-    return FileResponse("favicon.ico")
+    from fastapi.responses import Response
+    return Response(content="", media_type="image/x-icon")
 
 app.add_middleware(
     CORSMiddleware,
