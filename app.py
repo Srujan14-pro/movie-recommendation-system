@@ -4,7 +4,7 @@ import streamlit as st
 # =============================
 # CONFIG
 # =============================
-API_BASE = "http://localhost:8502/"  # Your FastAPI backend URL
+API_BASE = "https://movie-recommendation-system-3-aou9.onrender.com/"  # Your FastAPI backend URL
 TMDB_IMG = "https://image.tmdb.org/t/p/w500"
 
 st.set_page_config(page_title="Movie Recommender", page_icon="🎬", layout="wide")
