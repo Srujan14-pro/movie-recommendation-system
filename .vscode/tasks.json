@@ -1,0 +1,30 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Run FastAPI backend on port 8000",
+			"type": "shell",
+			"command": "uvicorn main:app --host 127.0.0.1 --port 8000 --reload"
+		},
+		{
+			"label": "Run FastAPI backend on port 8000",
+			"type": "shell",
+			"command": "D:/movie recommendation system/.venv/Scripts/python.exe -m uvicorn main:app --host 127.0.0.1 --port 8000 --reload"
+		},
+		{
+			"label": "Run FastAPI backend on port 8000",
+			"type": "shell",
+			"command": "\"D:/movie recommendation system/.venv/Scripts/python.exe\" -m uvicorn main:app --host 127.0.0.1 --port 8000 --reload"
+		},
+		{
+			"label": "Run FastAPI backend on port 8000",
+			"type": "shell",
+			"command": "\"D:/movie recommendation system/.venv/Scripts/python.exe\" -m uvicorn main:app --host 127.0.0.1 --port 8000 --reload"
+		},
+		{
+			"label": "Run FastAPI backend on port 8000",
+			"type": "shell",
+			"command": "\"D:/movie recommendation system/.venv/Scripts/python.exe\" -m uvicorn main:app --host 127.0.0.1 --port 8000 --reload"
+		}
+	]
+}
