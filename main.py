@@ -6,6 +6,7 @@ import numpy as np
 import pandas as pd
 import httpx
 from fastapi import FastAPI, HTTPException, Query
+from fastapi.responses import FileResponse
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from dotenv import load_dotenv
@@ -22,7 +23,19 @@ TMDB_IMG_500 = "https://image.tmdb.org/t/p/w500"
 if not TMDB_API_KEY:
     print("WARNING: TMDB_API_KEY missing")
 
+
 app = FastAPI(title="Movie Recommender API", version="3.0")
+
+# Root route to avoid 404 on /
+@app.get("/")
+def read_root():
+    return {"message": "Movie Recommender API is running."}
+
+# Favicon route to avoid 404 on /favicon.ico
+@app.get("/favicon.ico")
+def favicon():
+    # If you have a favicon.ico file, provide its path below. Otherwise, return a blank response.
+    return FileResponse("favicon.ico")
 
 app.add_middleware(
     CORSMiddleware,
